@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-country=Poland
+country=Brazil
 kbmap=ch
 output=Virtual-1
 resolution=1920x1080
