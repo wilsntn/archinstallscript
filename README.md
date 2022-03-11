@@ -16,6 +16,32 @@ A small summary:
 7. Generate the FSTAB file with genfstab -U /mnt >> /mnt/etc/FSTAB
 8. Chroot in with arch-chroot /mnt
 9. Download the git repository with git clone https://github.com/wilsntn/archinstallscript/
-10. cd arch-basic
-11. chmod +x install-uefi.sh
-12. run with ./install-uefi.sh
+10. cd arch-basic-master
+11. chmod +x base-uefi.sh
+12. run with ./base-uefi.sh
+
+Em pt_BR
+
+# Script para instalação Basica do Arch
+
+Neste repositório você encontrará scripts de pacotes para a instalação básica do Arch Linux e dos ambientes de desktop Gnome, KDE, Cinnamon e Xfce. 
+Outros Window Managers em breve.
+Modifique os pacotes ao seu gosto, torne o script executável com chmod +x {nome_do_script} e depois execute com ./{nome_do_script}.
+Um script para a instalação básica no MBR/Legacy estará disponível em breve.
+Lembre-se que a primeira parte da instalação do Arch Linux é manual, ou seja, você mesmo terá que particionar, formatar e montar o disco. Instale os pacotes base e certifique-se de incluir o git para que você possa clonar o repositório depois que estiver dentro da instalação "chroot".
+
+Um pequeno resumo:
+
+1. Se necessário, carregue seu mapa de teclado
+2. Atualize os servidores com pacman -Syy
+3. Particione o disco
+4. Formate as partições
+5. Monte as partições
+6. Instale os pacotes básicos em /mnt (pacstrap /mnt base linux linux-firmware git vim intel-ucode (ou amd-ucode))
+7. Gere o arquivo FSTAB com genfstab -U /mnt >> /mnt/etc/FSTAB
+8. Faça o chroot com arch-chroot /mnt
+9. Baixe o repositório git com git clone https://github.com/wilsntn/archinstallscript/
+10. cd arch-basic-master
+11. chmod +x base-uefi.sh
+12. execute com ./base-uefi.sh
+
